@@ -5,7 +5,7 @@ function ProductList({ products }){
             {products.map(product =>(
                 <li key={product.id}>
                     {product.name} - {product.price} - {product.category} 
-                    {product.featured && ` ${STAR} cleFeatured`}
+                    {product.featured && ` ${STAR} Featured`}
                 </li>
             ))}
         </ul>
