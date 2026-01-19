@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import ProductList from "./ProductList";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const products = [
+        {id: 1, name: "Laptop", price: 999.99, category: "Electronics", featured: false },
+        {id: 2, name: "Mountain Bike", price: 699.99, category: "Sports Gear", featured: true },
+        {id: 3, name: "Kayak", price: 899.99, category: "Sports Gear", featured: true },
+        {id: 4, name: "Smartphone", price: 1199.99, category: "Electronics", featured: false },
+        {id: 5, name: "Football", price: 29.99, category: "Sports Gear", featured: true },
+    ];
+
+    return (
+        <>
+            <h1>Product List</h1>
+            <ProductList products={products} />
+        </>
+    );
 }
 
 export default App;
+
